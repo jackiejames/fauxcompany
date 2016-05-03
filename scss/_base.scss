@@ -1,0 +1,190 @@
+*,
+*:before,
+*:after {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.clearfix:after {
+	display: table;
+	content: " ";
+	clear: both;
+}
+
+
+/* GLOBAL STYLES */
+
+.centerme {
+	text-align: center;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.subhead {
+	font-family: $font-sans;
+	text-transform: uppercase;
+	font-size: 14pt;
+}
+
+
+/* PAGE STYLES */
+
+html { 
+  background: url(../img/bg.png) repeat center center fixed #FFFFFF; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body {
+	font-family: $font-copy;
+}
+
+// HEADER
+header {
+	font-family: $font-sans;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	letter-spacing: -2px;
+	font-size: 50pt;
+	font-weight: bold;
+}
+
+// TAGLINE
+main {
+	background-color: $blue;
+	section {
+		@include span(12);
+		text-align: center;
+		font-family: $font-sans;
+		font-size: 15pt;
+		line-height: 22pt;
+		padding: 50px;
+		color: #FFFFFF;
+		background-color: $blue;
+	}
+}
+
+// TAGLINE
+.products {
+	article {
+		@include span(4);
+		// padding: 100px;
+		padding-left: 40px;
+		padding-right: 40px;
+		padding: 50px;
+		text-align: center;
+		background-color: $transwhite;
+
+			img {
+				width: 200px;
+				height: 200px;
+				text-align: center;
+				}
+
+			p {	
+				text-align: center;
+				padding: 10px;
+				}
+		}
+}
+
+// ADS
+.ads {
+	background-color: $blue;
+	max-height: 500px;
+	article {
+		@include span(6);
+		background-color: $blue;
+	img {
+		height: 300px;
+		padding-top: 10px;
+	}
+	}
+}
+
+// FOOTER
+.footer {
+	display: flex;
+	text-align: left;
+	@include span(12);
+	font-size: 10pt;
+	background-color: $transwhite;
+	min-height: 100px;
+	padding-top: 50px;
+	min-height: 150px;
+	padding-left: 150px;
+	section {
+		@include span(6);
+	}
+}
+
+
+
+
+/** RESPONSIVE STYLES **/
+
+// MEDIUM BREAKPOINT 
+
+@include susy-breakpoint($medium) {
+
+	.products {
+		article {
+			@include span(12);
+		}
+	}
+
+	.ads {
+		article {
+			@include span(12);
+		}
+	}
+
+	.footer {
+		padding: 20px;
+		section {
+			@include span(6);
+			padding: 0px;
+		}	
+	} // end footer
+}
+
+// SMALL BREAKPOINT 
+
+@include susy-breakpoint($small) {
+
+	.products {
+		article {
+			@include span(12);
+		}
+	}
+
+	.ads {
+		article {
+			@include span(12);
+		}
+	}
+
+	.footer {
+		padding: 20px;
+		section {
+			@include span(6);
+			padding: 0px;
+		}	
+	} // end footer
+}
+
+
+
+
+

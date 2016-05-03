@@ -1,0 +1,21 @@
+@mixin box() {
+	border: solid 0px $blue;
+}
+
+// MIXIN CLEARFIX
+@mixin clearfixed() {
+	&:after {
+		display: table;
+		content: " ";
+		clearfix: both;
+	}
+}
+
+// CSS RULE
+.clearfixed {
+	&:after {
+		display: table;
+		content: " ";
+		clearfix: both;
+	}
+}

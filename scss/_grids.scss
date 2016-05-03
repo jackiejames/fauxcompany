@@ -1,0 +1,27 @@
+// Requirements
+// ============
+// Susy Setup Map
+
+@import "susy";
+
+$susy: (
+  columns: 12,
+  gutters: 1/2,
+  math: fluid,
+  output: float,
+  gutter-position: inside,
+);
+
+// math: fluid, static
+// output: float, isolate
+// gutter-position: before, after, split, inside
+
+@include border-box-sizing;
+
+// Define a range, standard breakpoints
+// desktop, mobile
+// small, medium, large?
+
+$small: 1px 480px;
+$medium: 481px 768px;
+$large: 769px 1500px;
